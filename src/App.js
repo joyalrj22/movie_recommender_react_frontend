@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import MovieBox from './components/MovieBox';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <MovieBox poster={logo} title={"title"} summary={"summary"}/>
     </div>
   );
 }
