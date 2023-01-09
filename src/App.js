@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import MovieCarousel from './components/MovieCarousel';
+import posterImg from './resources/pulpfiction.jpg';
 import './App.css';
-import MovieBox from './components/MovieBox';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 function App() {
+  let movies = [
+    {poster:posterImg, title:"title1", summary:"summary"},
+    {poster:posterImg, title:"title12", summary:"summary2"},
+    {poster:posterImg, title:"title3", summary:"summary3"},
+    {poster:posterImg, title:"title4", summary:"summary4"},
+    {poster:posterImg, title:"title5", summary:"summary5"}
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <MovieBox poster={logo} title={"title"} summary={"summary"}/>
+      <MovieCarousel movies={movies}/>
     </div>
   );
 }
