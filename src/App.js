@@ -1,6 +1,6 @@
 import MovieCarousel from './components/MovieCarousel';
 import posterImg from './resources/pulpfiction.jpg';
-import './App.css';
+import './css/App.css';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 function App() {
