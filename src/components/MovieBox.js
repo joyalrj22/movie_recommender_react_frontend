@@ -10,7 +10,7 @@ function MovieBox(props) {
             <img className={"moviePoster"} src={props.poster}/>
             <p className={"movieTitle"}>{props.title}</p>
             <p className={"movieSummary"}>{props.summary}</p>
-            <Rating className={"movieRating"}/>
+            <div className={"movieRating"}><Rating/></div>
         </div>
     );
 }
