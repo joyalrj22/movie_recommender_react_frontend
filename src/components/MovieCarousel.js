@@ -1,15 +1,22 @@
 import React from 'react';
 import {CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import MovieBox from './MovieBox';
-import '../css/MovieSlides.css'
+import useMediaQuery from '../hooks/UseMediaQuery';
+
+import '../css/MovieSlides/MovieSlides_SmallScreen.css';
+import '../css/MovieSlides/MovieSlides.css';
+import '../css/MovieSlides/MovieSlides_LargeScreen.css';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
+const LARGE_SCREEN = '(min-width: 768px)';
+
 function MovieCarousel(props) {
+    let isLargeScreen = useMediaQuery(LARGE_SCREEN);
     return (
-        <CarouselProvider infinite orientation={"horizontal"} step={2} visibleSlides={5} naturalSlideWidth={1} naturalSlideHeight={2} totalSlides={props.movies.length}>
-            <div className='slideNavigationButtons'>
-                <ButtonBack className='movieSlideBack'>Back</ButtonBack>
-                <ButtonNext className='movieSlideNext'>Next</ButtonNext>
+        <CarouselProvider infinite orientation={"horizontal"} step={2} visibleSlides={isLargeScreen ? 5 : 3} naturalSlideWidth={1} naturalSlideHeight={2} totalSlides={props.movies.length}>
+            <div className='slideNavigation'>
+                <ButtonBack className='slideNavigationButton'>&lt;</ButtonBack>
+                <ButtonNext className='slideNavigationButton'>&gt;</ButtonNext>
             </div>
             <Slider className={"slider"}>
                 {
