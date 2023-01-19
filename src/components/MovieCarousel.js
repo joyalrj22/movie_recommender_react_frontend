@@ -13,7 +13,7 @@ const LARGE_SCREEN = '(min-width: 768px)';
 function MovieCarousel(props) {
     let isLargeScreen = useMediaQuery(LARGE_SCREEN);
     return (
-        <CarouselProvider infinite orientation={"horizontal"} step={2} visibleSlides={isLargeScreen ? 5 : 3} naturalSlideWidth={1} naturalSlideHeight={2} totalSlides={props.movies.length}>
+        <CarouselProvider isIntrinsicHeight infinite orientation={"horizontal"} step={2} visibleSlides={isLargeScreen ? 5 : 3} naturalSlideWidth={0.5} naturalSlideHeight={1} totalSlides={props.movies.length}>
             <div className='slideNavigation'>
                 <ButtonBack className='slideNavigationButton'>&lt;</ButtonBack>
                 <ButtonNext className='slideNavigationButton'>&gt;</ButtonNext>
