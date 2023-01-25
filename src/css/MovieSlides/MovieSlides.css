@@ -20,6 +20,11 @@
     background-color: #f2ebe9;
     box-shadow: 0 4px 4px rgba(0,0,0,.05);
     border-radius: 10px;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.movieSlideContent {
+    transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 .moviePoster {
@@ -54,7 +59,9 @@
     padding-top: 0.25em;
 }
 
-.movieRating:hover {
-    display: flex;
+.movieSlide:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    position: relative;
+    z-index: 1;
 }
-
