@@ -6,11 +6,11 @@ import Rating from '@mui/material/Rating';
  */
 function MovieBox(props) {
     return (
-        <div className={"movieSlide"}>
-            <img className={"moviePoster"} src={props.poster}/>
-            <p className={"movieTitle"}>{props.title}</p>
-            <p className={"movieSummary"}>{props.summary}</p>
-            <div className={"movieRating"}><Rating/></div>
+        <div className="movieSlide">
+            <img className="moviePoster movieSlideContent" src={props.poster}/>
+            <p className="movieTitle movieSlideContent">{props.title}</p>
+            <p className="movieSummary movieSlideContent">{props.summary}</p>
+            <div className="movieRating movieSlideContent"><Rating/></div>
         </div>
     );
 }

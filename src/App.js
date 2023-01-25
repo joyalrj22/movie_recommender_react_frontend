@@ -1,6 +1,7 @@
 import MovieCarousel from './components/MovieCarousel';
 import posterImg from './resources/pulpfiction.jpg';
 import './css/App.css';
+import React from 'react';
 
 function App() {
   let movies = [
@@ -20,7 +21,15 @@ function App() {
     {poster:posterImg, title:"title5", summary:"summary5"}
   ]
   return (
+    <React.Fragment>
     <MovieCarousel movies={movies}/>
+    <MovieCarousel movies={movies}/>
+    <MovieCarousel movies={movies}/>
+    <MovieCarousel movies={movies}/>
+    <MovieCarousel movies={movies}/>
+    <MovieCarousel movies={movies}/>
+    <MovieCarousel movies={movies}/>
+    </React.Fragment>
   );
 }
 
